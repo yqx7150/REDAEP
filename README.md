@@ -1,5 +1,5 @@
 # REDAEP
-**Paper**: REDAEP: Robust and Enhanced Denoising Autoen-coding Prior for Sparse-View CT Reconstruction  
+**Paper**: REDAEP: Robust and Enhanced Denoising Autoencoding Prior for Sparse-View CT Reconstruction  
 **Authors**: Fengqin Zhang, Minghui Zhang, Binjie Qin, Yi Zhang, Zichen Xu, Qiegen Liu, and Dong Liang
 
 ## Motivation
