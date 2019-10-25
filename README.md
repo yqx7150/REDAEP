@@ -7,7 +7,9 @@ In X-ray computed tomography, radiation doses are harmful but can be significant
 
 The overall REDAEP algorithm is as follows:
 <div align=center>
-<![repeat-REDAEP](https://github.com/yqx7150/REDAEP/blob/master/figs/Algorithm.png)>
+  
+![repeat-REDAEP](https://github.com/yqx7150/REDAEP/blob/master/figs/Algorithm.png)
+
 </div>
 
 The flowchart illustration of REDEAP for single-channel CT reconstruction
