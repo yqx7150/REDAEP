@@ -1,0 +1,772 @@
+name: "RED-Net"
+
+input: "data"
+input_shape {
+  dim: 1 # batchsize
+  dim: %d # number of colour channels - lum
+  dim: %d # width
+  dim: %d # height
+}
+force_backward: true
+
+####################
+### AUTO ENCODER ###
+####################
+
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  param {
+    name: "conv_1_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_1_b"
+    lr_mult: 1.0
+  } 
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "conv1"
+  top: "conv1"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv3"
+  type: "Convolution"
+  bottom: "conv1"
+  top: "conv3"
+  param {
+    name: "conv_3_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_3_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+
+layer {
+  name: "relu3"
+  type: "ReLU"
+  bottom: "conv3"
+  top: "conv3"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv4"
+  type: "Convolution"
+  bottom: "conv3"
+  top: "conv4"
+  param {
+    name: "conv_4_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_4_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu4"
+  type: "ReLU"
+  bottom: "conv4"
+  top: "conv4"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv5"
+  type: "Convolution"
+  bottom: "conv4"
+  top: "conv5"
+  param {
+    name: "conv_5_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_5_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+
+layer {
+  name: "relu5"
+  type: "ReLU"
+  bottom: "conv5"
+  top: "conv5"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv6"
+  type: "Convolution"
+  bottom: "conv5"
+  top: "conv6"
+  param {
+    name: "conv_6_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_6_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+
+
+layer {
+  name: "relu6"
+  type: "ReLU"
+  bottom: "conv6"
+  top: "conv6"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv7"
+  type: "Convolution"
+  bottom: "conv6"
+  top: "conv7"
+  param {
+    name: "conv_7_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_7_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+
+
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "conv7"
+  top: "conv7"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv8"
+  type: "Convolution"
+  bottom: "conv7"
+  top: "conv8"
+  param {
+    name: "conv_8_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_8_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu8"
+  type: "ReLU"
+  bottom: "conv8"
+  top: "conv8"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv9"
+  type: "Convolution"
+  bottom: "conv8"
+  top: "conv9"
+  param {
+    name: "conv_9_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_9_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu9"
+  type: "ReLU"
+  bottom: "conv9"
+  top: "conv9"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "conv10"
+  type: "Convolution"
+  bottom: "conv9"
+  top: "conv10"
+  param {
+    name: "conv_10_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_10_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu10"
+  type: "ReLU"
+  bottom: "conv10"
+  top: "conv10"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "deconv10"
+  type: "Deconvolution"
+  bottom: "conv10"
+  top: "conv11"
+  param {
+    name: "conv_11_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_11_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "etlwise"
+  type: "Eltwise"
+  bottom: "conv9"
+  bottom: "conv11"
+  top: "etlwise"
+  eltwise_param { 
+    operation: SUM 
+    coeff: 1
+    coeff: 1
+  }
+}
+
+layer {
+  name: "relu11"
+  type: "ReLU"
+  bottom: "etlwise"
+  top: "etlwise"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+
+layer {
+  name: "deconv9"
+  type: "Deconvolution"
+  bottom: "etlwise"
+  top: "conv12"
+  param {
+    name: "conv_12_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_12_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu12"
+  type: "ReLU"
+  bottom: "conv12"
+  top: "conv12"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "deconv8"
+  type: "Deconvolution"
+  bottom: "conv12"
+  top: "conv13"
+  param {
+    name: "conv_13_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_13_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+
+layer {
+  name: "etlwise1"
+  type: "Eltwise"
+  bottom: "conv7"
+  bottom: "conv13"
+  top: "etlwise1"
+  eltwise_param { 
+    operation: SUM 
+    coeff: 1
+    coeff: 1
+  }
+}
+
+layer {
+  name: "relu13"
+  type: "ReLU"
+  bottom: "etlwise1"
+  top: "etlwise1"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "deconv7"
+  type: "Deconvolution"
+  bottom: "etlwise1"
+  top: "conv14"
+  param {
+    name: "conv_14_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_14_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu14"
+  type: "ReLU"
+  bottom: "conv14"
+  top: "conv14"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "deconv6"
+  type: "Deconvolution"
+  bottom: "conv14"
+  top: "conv15"
+  param {
+    name: "conv_15_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_15_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "etlwise2"
+  type: "Eltwise"
+  bottom: "conv5"
+  bottom: "conv15"
+  top: "etlwise2"
+  eltwise_param { 
+    operation: SUM 
+    coeff: 1
+    coeff: 1
+  }
+}
+
+layer {
+  name: "relu15"
+  type: "ReLU"
+  bottom: "etlwise2"
+  top: "etlwise2"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+
+layer {
+  name: "deconv5"
+  type: "Deconvolution"
+  bottom: "etlwise2"
+  top: "conv16"
+  param {
+    name: "conv_16_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_16_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu16"
+  type: "ReLU"
+  bottom: "conv16"
+  top: "conv16"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "deconv4"
+  type: "Deconvolution"
+  bottom: "conv16"
+  top: "conv17"
+  param {
+    name: "conv_17_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_17_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "etlwise3"
+  type: "Eltwise"
+  bottom: "conv3"
+  bottom: "conv17"
+  top: "etlwise3"
+  eltwise_param { 
+    operation: SUM 
+    coeff: 1
+    coeff: 1
+  }
+}
+
+layer {
+  name: "relu17"
+  type: "ReLU"
+  bottom: "etlwise3"
+  top: "etlwise3"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "deconv3"
+  type: "Deconvolution"
+  bottom: "etlwise3"
+  top: "conv18"
+  param {
+    name: "conv_18_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_18_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 64
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu18"
+  type: "ReLU"
+  bottom: "conv18"
+  top: "conv18"
+  relu_param {
+    negative_slope: 0.0
+  }
+}
+
+layer {
+  name: "deconv1"
+  type: "Deconvolution"
+  bottom: "conv18"
+  top: "conv20"
+  param {
+    name: "conv_20_w"
+    lr_mult: 1.0
+  }
+  param {
+    name: "conv_20_b"
+    lr_mult: 1.0
+  }
+  convolution_param {
+    num_output: 3
+    kernel_size: 3
+    stride: 1
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+
+layer {
+  name: "net_output"
+  type: "Eltwise"
+  bottom: "data"
+  bottom: "conv20"
+  top: "net_output"
+  eltwise_param { 
+    operation: SUM 
+    coeff: 1
+    coeff: 1
+  }
+}
+layer {
+  name: "etRelu1"
+  type: "ReLU"
+  bottom: "net_output"
+  top: "net_output"
+}
+
+
+
