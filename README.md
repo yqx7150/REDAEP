@@ -9,6 +9,7 @@ In X-ray computed tomography, radiation doses are harmful but can be significant
 <div align="center">
   
 <img src="https://github.com/yqx7150/REDAEP/blob/master/figs/Visual_comparison.png" width = "800" height = "300">  
+<img src="https://github.com/yqx7150/REDAEP/blob/master/figs/Visual_comparison.png">  
 
 ## Algorithm
 The overall REDAEP algorithm is as follows:  
