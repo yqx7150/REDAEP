@@ -21,6 +21,9 @@ The overall REDAEP algorithm is as follows:
 The flowchart illustration of REDEAP for single-channel CT reconstruction
 ![repeat-REDAEP](https://github.com/yqx7150/REDAEP/blob/master/figs/Iteration.png)
 
+## Requirements and Dependencies   
+SysMat_ImgSize_256_Views_64_Bins_512.mat
+(https://pan.baidu.com/s/1Mjybi8Me6lRwAE0s9Gu1qw  Password：auj6)
 
 ## Other Related Projects
   * Highly Undersampled Magnetic Resonance Imaging Reconstruction using Autoencoding Priors  
