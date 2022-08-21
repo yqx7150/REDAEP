@@ -47,3 +47,5 @@ SysMat_ImgSize_256_Views_64_Bins_512.mat
   * Learning Multi-Denoising Autoencoding Priors for Image Super-Resolution  
 [<font size=5>**[Paper]**</font>](https://www.sciencedirect.com/science/article/pii/S1047320318302700)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/MDAEP-SR)
 
+  * Diffusion Models for Medical Imaging
+[<font size=5>**[Paper]**</font>](https://github.com/yqx7150/Diffusion-Models-for-Medical-Imaging)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/Diffusion-Models-for-Medical-Imaging)   [<font size=5>**[PPT]**</font>](https://github.com/yqx7150/HKGM/tree/main/PPT) 
