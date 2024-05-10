@@ -32,17 +32,17 @@ SysMat_ImgSize_256_Views_64_Bins_512.mat
 * Generative Modeling in Sinogram Domain for Sparse-view CT Reconstruction      
 [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/document/10233041)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/GMSD)
 
-  * One Sample Diffusion Model in Projection Domain for Low-Dose CT Imaging  
+* One Sample Diffusion Model in Projection Domain for Low-Dose CT Imaging  
 [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/abstract/document/10506793)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/OSDM)
       
-  * 基于深度能量模型的低剂量CT重建  
+* 基于深度能量模型的低剂量CT重建  
 [<font size=5>**[Paper]**</font>](http://cttacn.org.cn/cn/article/doi/10.15953/j.ctta.2021.077)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/EBM-LDCT)
 
-  * Wavelet-improved score-based generative model for medical imaging  
+* Wavelet-improved score-based generative model for medical imaging  
 [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/abstract/document/10288274)       
   
-  * Deep Frequency-Recurrent Priors for Inverse Imaging Reconstruction  
+* Deep Frequency-Recurrent Priors for Inverse Imaging Reconstruction  
 [<font size=5>**[Paper]**</font>](https://www.sciencedirect.com/science/article/pii/S0165168421003571)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/HFDAEP)
  
-  * Diffusion Models for Medical Imaging
+* Diffusion Models for Medical Imaging
 [<font size=5>**[Paper]**</font>](https://github.com/yqx7150/Diffusion-Models-for-Medical-Imaging)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/Diffusion-Models-for-Medical-Imaging)   [<font size=5>**[PPT]**</font>](https://github.com/yqx7150/HKGM/tree/main/PPT) 
