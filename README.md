@@ -26,6 +26,8 @@ SysMat_ImgSize_256_Views_64_Bins_512.mat
 (https://pan.baidu.com/s/1Mjybi8Me6lRwAE0s9Gu1qw  Password：auj6)
 
 ## Other Related Projects
+<div align="center"><img src="https://github.com/yqx7150/OSDM/blob/main/All-CT.png" >  </div>   
+    
   * Iterative Reconstruction for Low-Dose CT using Deep Gradient Priors of Generative Model  
 [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/abstract/document/9703672)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/EASEL)   [<font size=5>**[PPT]**</font>](https://github.com/yqx7150/HGGDP/tree/master/Slide)
    
